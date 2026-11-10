@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </radialGradient>
+
+    <!-- Memphis Flat Drop Shadows -->
+    <filter id="shadowLight" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="3" dy="6" stdDeviation="0" flood-color="#1E1B4B" flood-opacity="0.12" />
+    </filter>
+    <filter id="shadowSharp" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="4" dy="8" stdDeviation="0" flood-color="#1E1B4B" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle Canvas -->
+  <circle cx="250" cy="250" r="220" fill="url(#bgGlow)" />
+
+  <!-- Background Decorative Memphis Geometry -->
+  <g id="background-decorations" opacity="0.85">
+    <!-- Floating Bell Curve Lines -->
+    <path d="M 60 210 Q 90 210 110 170 T 160 130 T 210 210" fill="none" stroke="#93C5FD" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 6" />
+    <!-- Floating Plus / Crosses -->
+    <g stroke="#F472B6" stroke-width="4" stroke-linecap="round">
+      <path d="M 80 100 L 80 116 M 72 108 L 88 108" />
+      <path d="M 410 280 L 410 296 M 402 288 L 418 288" />
+    </g>
+    <!-- Floating Math Symbols & Dots -->
+    <circle cx="400" cy="120" r="6" fill="#FBBF24" />
+    <circle cx="100" cy="360" r="8" fill="#34D399" />
+    <circle cx="380" cy="380" r="5" fill="#6366F1" />
+    <!-- Yellow Memphis Sparkle -->
+    <path d="M 370 190 L 374 202 L 386 206 L 374 210 L 370 222 L 366 210 L 354 206 L 366 202 Z" fill="#FBBF24" />
+  </g>
+
+  <!-- Main Owl Character Group -->
+  <g id="owl-mascot">
+    
+    <!-- Tail Feathers -->
+    <path d="M 210 370 Q 250 430 290 370 Z" fill="#4338CA" />
+
+    <!-- Feet (Exaggerated Memphis Pill Legs & Feet) -->
+    <g id="legs">
+      <!-- Left Leg -->
+      <rect x="205" y="380" width="16" height="45" rx="8" fill="#F59E0B" />
+      <path d="M 190 420 C 190 410 225 410 225 425 C 225 428 190 428 190 420 Z" fill="#F59E0B" />
+      <!-- Right Leg -->
+      <rect x="279" y="380" width="16" height="45" rx="8" fill="#F59E0B" />
+      <path d="M 275 420 C 275 410 310 410 310 425 C 310 428 275 428 275 420 Z" fill="#F59E0B" />
+    </g>
+
+    <!-- Outer Body (Asymmetric Memphis Blob/Egg Shape) -->
+    <path d="M 160 250 C 140 130 360 110 340 250 C 330 330 330 390 250 390 C 170 390 170 340 160 250 Z" fill="#4F46E5" filter="url(#shadowSharp)" />
+
+    <!-- Chest / Belly (Contrast Memphis Arch - Light Teal/Cyan) -->
+    <path d="M 185 240 C 185 180 315 180 315 240 C 315 320 295 375 250 375 C 205 375 185 320 185 240 Z" fill="#06B6D4" />
+
+    <!-- Bell Curve Graphic on Belly (Z-Score Theme) -->
+    <g id="belly-graph" opacity="0.9">
+      <!-- Axis -->
+      <line x1="205" y1="335" x2="295" y2="335" stroke="#ECFEFF" stroke-width="3" stroke-linecap="round" />
+      <line x1="250" y1="335" x2="250" y2="275" stroke="#ECFEFF" stroke-width="2" stroke-dasharray="3 3" />
+      <!-- Gaussian Curve -->
+      <path d="M 210 335 Q 230 335 240 300 T 250 275 T 260 300 T 290 335" fill="none" stroke="#FDE047" stroke-width="4" stroke-linecap="round" />
+      <!-- Z-Score Area Fill Under Curve -->
+      <path d="M 235 335 Q 242 312 250 275 T 260 300 Q 263 318 265 335 Z" fill="#FDE047" opacity="0.3" />
+    </g>
+
+    <!-- Giant Stylized Glasses & Face Setup -->
+    <g id="head-and-eyes">
+      <!-- Ear Tufts (Memphis Sharp Geometric Cones) -->
+      <path d="M 165 160 L 135 95 L 205 135 Z" fill="#3730A3" />
+      <path d="M 335 160 L 365 95 L 295 135 Z" fill="#3730A3" />
+      <!-- Inner Ear Accent -->
+      <path d="M 160 150 L 145 110 L 185 135 Z" fill="#F472B6" />
+      <path d="M 340 150 L 355 110 L 315 135 Z" fill="#F472B6" />
+
+      <!-- Left Eye Outer (Coral Pink Circle) -->
+      <circle cx="205" cy="205" r="46" fill="#F43F5E" filter="url(#shadowLight)" />
+      <!-- Left Eye Inner (White) -->
+      <circle cx="205" cy="205" r="34" fill="#FFFFFF" />
+      <!-- Left Pupil (Off-center Corporate Memphis style) -->
+      <circle cx="213" cy="201" r="18" fill="#1E1B4B" />
+      <circle cx="218" cy="196" r="6" fill="#FFFFFF" />
+
+      <!-- Right Eye Outer (Coral Pink Circle) -->
+      <circle cx="295" cy="205" r="46" fill="#F43F5E" filter="url(#shadowLight)" />
+      <!-- Right Eye Inner (White) -->
+      <circle cx="295" cy="205" r="34" fill="#FFFFFF" />
+      <!-- Right Pupil -->
+      <circle cx="303" cy="201" r="18" fill="#1E1B4B" />
+      <circle cx="308" cy="196" r="6" fill="#FFFFFF" />
+
+      <!-- Glasses Frame (Geometric Oversized Memphis Frames) -->
+      <!-- Bridge -->
+      <rect x="237" y="198" width="26" height="8" rx="4" fill="#FBBF24" />
+      <!-- Left Frame Rim -->
+      <circle cx="205" cy="205" r="48" fill="none" stroke="#FBBF24" stroke-width="7" />
+      <!-- Right Frame Rim -->
+      <circle cx="295" cy="205" r="48" fill="none" stroke="#FBBF24" stroke-width="7" />
+
+      <!-- Beak (Flat Memphis Diamond/Triangle) -->
+      <path d="M 250 215 L 263 240 L 250 252 L 237 240 Z" fill="#F97316" />
+    </g>
+
+    <!-- Wings & Expressive Memphis Arms -->
+    
+    <!-- Left Wing (Resting comfortably on hip) -->
+    <path d="M 162 245 C 120 260 125 330 178 335 C 185 310 185 270 162 245 Z" fill="#3730A3" filter="url(#shadowLight)" />
+
+    <!-- Right Arm / Wing (Exaggerated Curved Memphis Arm Holding Dynamic Element) -->
+    <!-- Arm Path pointing up towards the floating Z-score badge -->
+    <path d="M 330 250 C 390 240 410 180 375 145 C 360 160 345 200 322 230 Z" fill="#3730A3" filter="url(#shadowLight)" />
+
+    <!-- Floating Interactive "Z" Score Badge (Held / Pointed at by Right Wing) -->
+    <g id="z-score-badge" filter="url(#shadowSharp)">
+      <!-- Speech Bubble / Card Backing -->
+      <rect x="360" y="75" width="105" height="70" rx="18" fill="#10B981" />
+      <!-- Little Indicator Pointer -->
+      <path d="M 380 145 L 370 160 L 395 145 Z" fill="#10B981" />
+      
+      <!-- Card Text / Formula Graphics -->
+      <!-- "z =" Label -->
+      <text x="375" y="118" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="32" fill="#FFFFFF">Z</text>
+      <text x="398" y="118" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="22" fill="#A7F3D0">=</text>
+      
+      <!-- Mini Formula Graphic: (X - μ) / σ -->
+      <text x="420" y="102" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF">x - μ</text>
+      <line x1="418" y1="108" x2="452" y2="108" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+      <text x="431" y="127" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="15" fill="#FFFFFF">σ</text>
+    </g>
+
+    <!-- Cute Academic Mortarboard / Grad Cap (Tilted Corporate Memphis Style) -->
+    <g id="graduation-cap" filter="url(#shadowLight)">
+      <!-- Cap Base / Band -->
+      <path d="M 218 105 C 218 95 282 95 282 105 L 275 118 C 255 122 240 122 225 118 Z" fill="#1E1B4B" />
+      <!-- Cap Diamond Top -->
+      <polygon points="250,65 315,92 250,112 185,92" fill="#312E81" />
+      <!-- Tassel Button -->
+      <circle cx="250" cy="88" r="4" fill="#FBBF24" />
+      <!-- Tassel String & Fringe -->
+      <path d="M 250 88 Q 290 90 298 120" fill="none" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" />
+      <rect x="293" y="120" width="10" height="15" rx="3" fill="#FBBF24" />
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4c5ff0">
+  <title>2026 A/L community Z-score estimate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to calculator</a>
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-mascot" src="assets/gemini-mascot.svg" alt="" width="56" height="56">
+      <span class="brand-name">2026 A/L Z-score</span>
+    </div>
+    <div class="top-actions">
+      <div class="language" role="group" aria-label="Language" data-i18n-aria="languageGroup">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="si" aria-pressed="false">සිංහල</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title" data-i18n="title">2026 A/L community Z-score estimate</h1>
+        <p class="subtitle" data-i18n="subtitle">View a historical reference estimate while the 2026 community data builds. The estimate switches to community data as enough students contribute their actual results.</p>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Z-score calculator" data-i18n-aria="workspaceLabel">
+      <form class="form-area" id="calculator-form" aria-labelledby="details-title" novalidate>
+        <h2 class="section-label" id="details-title" data-i18n="detailsLabel">Your marks</h2>
+
+        <div class="subjects">
+          <h2 class="section-label" id="marks-title" data-i18n="marksLabel">Choose subjects and enter marks</h2>
+          <p class="sr-only" id="mark-instructions" data-i18n="markInstruction">Enter a whole-number mark from 0 to 100.</p>
+          <p class="subject-note" id="subject-note" data-i18n="subjectNote">Select three distinct A/L subjects.</p>
+          <div class="subject-head" aria-hidden="true"><span data-i18n="subjectColumn">Subject</span><span data-i18n="marksColumn">Raw mark</span></div>
+          <div class="subject-grid" id="subject-grid"></div>
+        </div>
+
+        <label class="contribution-opt-in">
+          <input id="contribute" type="checkbox">
+          <span class="contribution-copy">
+            <span class="optional-tag" data-i18n="optionalTag">OPTIONAL</span>
+            <strong data-i18n="contributeLabel">Share my real marks to build the 2026 community estimate</strong>
+            <span class="contribution-description" data-i18n="contributeDescription">Only opt in with your actual 2026 results. Guesses or false marks can distort everyone’s estimate. Marks stay in restricted storage for up to 30 days so incorrect submissions can be removed.</span>
+          </span>
+        </label>
+
+        <div class="form-footer">
+          <div class="form-footer-copy">
+            <p class="validation" id="validation" role="alert" aria-live="assertive" aria-atomic="true"></p>
+          </div>
+          <button class="primary" type="submit" data-i18n="calculate">View Z-score</button>
+        </div>
+        <div class="result" id="result" role="status" aria-live="polite" aria-atomic="true">
+          <div class="result-summary"><span class="result-title" data-i18n="resultIdleTitle">Z-score estimate (unofficial)</span><span class="result-copy" data-i18n="resultCopy">A historical reference estimate is shown while 2026 community data builds, where historical statistics are available. The app switches to community data after each selected subject reaches 101 contributions.</span><div class="subject-results" id="subject-results"></div></div>
+          <span class="result-value" aria-label="No score available">—</span>
+        </div>
+        <section class="contribution-prompt" id="contribution-prompt" aria-labelledby="contribution-prompt-title" aria-live="polite" hidden>
+          <div class="contribution-prompt-copy">
+            <strong id="contribution-prompt-title" data-i18n="contributionPromptTitle">Have official 2026 results?</strong>
+            <span data-i18n="contributionPromptCopy">Sharing your real marks is optional and helps improve the community estimate.</span>
+          </div>
+          <div class="contribution-prompt-actions">
+            <button class="prompt-button" id="prompt-contribute" type="button" data-i18n="promptContribute">Share my marks</button>
+            <button class="prompt-dismiss" id="dismiss-contribution-prompt" type="button" data-i18n="promptLater">Maybe later</button>
+          </div>
+        </section>
+      </form>
+
+      <aside class="method" id="method" aria-labelledby="method-title">
+        <h2 id="method-title" data-i18n="methodTitle">How the community estimate works</h2>
+        <p class="method-intro" data-i18n="methodIntro">The app uses historical reference statistics until each subject has 101 contributions. Then it calculates a community estimate using current 2026 marks.</p>
+        <div class="flow-visual" aria-hidden="true"><svg viewBox="0 0 240 64" fill="none"><path d="M36 17H87M36 32H87M36 47H87M149 32H191" stroke="#27294f" stroke-width="4" stroke-linecap="round"/><circle cx="19" cy="17" r="8" fill="#ef776a" stroke="#27294f" stroke-width="2"/><circle cx="19" cy="32" r="8" fill="#f7d96f" stroke="#27294f" stroke-width="2"/><circle cx="19" cy="47" r="8" fill="#afa0ff" stroke="#27294f" stroke-width="2"/><rect x="89" y="12" width="60" height="40" rx="12" fill="#e1f5f6" stroke="#27294f" stroke-width="3"/><circle cx="212" cy="32" r="20" fill="#ef776a" stroke="#27294f" stroke-width="3"/><path d="M205 32h14m-5-5 5 5-5 5" stroke="#27294f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="flow-labels"><span data-i18n="flowMarks">Your marks</span><span data-i18n="flowReference">2026 contributions</span><span data-i18n="flowEstimate">Community estimate</span></div>
+        <div class="notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg><span data-i18n="estimateWarning">This is a community estimate based on self-reported marks, not an official Z-score. Contributions may be incomplete or unrepresentative, so do not use it as an admissions result.</span></div>
+        <p class="community-status" id="community-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </aside>
+    </section>
+    <div class="below"><span><strong data-i18n="privacyTitle">Your privacy</strong> <span data-i18n="privacyNote">Without opting in, your marks stay in this page. If you contribute, marks are stored privately for up to 30 days so incorrect submissions can be removed. Then individual marks are deleted and only subject totals remain. A one-way network-address code is kept up to 48 hours to limit spam; the address itself is not stored.</span></span><span data-i18n="methodPending">No names or index numbers are collected.</span></div>
+  </main>
+  <dialog class="confirmation" id="contribution-dialog" aria-labelledby="contribution-title" aria-describedby="contribution-copy">
+    <h2 id="contribution-title" data-i18n="contributionTitle">Use actual 2026 results only</h2>
+    <p id="contribution-copy" data-i18n="contributionCopy">By confirming, you send your three subject names and marks to build community statistics. Guesses or false marks can distort other students’ estimates, so only share actual results. Marks are kept in restricted storage for up to 30 days so an incorrect submission can be removed, then individual marks are deleted and only subject totals remain. No name or index number is collected. A one-way code based on your network address is kept for up to 48 hours to limit spam; your address itself is not stored.</p>
+    <div class="confirmation-actions">
+      <button class="secondary-action" id="cancel-contribution" type="button" data-i18n="keepPrivate" autofocus>Keep private</button>
+      <button class="primary" id="confirm-contribution" type="button" data-i18n="confirmReal">I confirm these are my actual marks</button>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="subjects.js" defer></script>
+  <script src="copy.js" defer></script>
+  <script src="community-config.js" defer></script>
+  <script src="historical-stats.js" defer></script>
+  <script src="community-stats.js" defer></script>
+  <script src="community-app.js" defer></script>
+</body>
+</html>

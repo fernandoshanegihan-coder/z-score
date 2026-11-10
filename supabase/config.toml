@@ -1,0 +1,2 @@
+[functions.community-zscore]
+verify_jwt = false

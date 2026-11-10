@@ -1,0 +1,8 @@
+node_modules/
+.agents/
+.codex/
+.impeccable/
+supabase/.temp/
+.env
+.env.*
+!.env.example
